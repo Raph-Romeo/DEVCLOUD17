@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}
+<div class='pop_up'>
+  <div class='prompt'> </div>
+ </div>
+ <div>
+ <div class='intro'>
+ <h1> Welcome, </h1>
+ <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+ </div>
+ <div class='header_explore'>
+ <h1 class="explore"> Explore </h1> <div class='actions'> <button class='add_button' onclick="window.location.href = '/form'" title='add new person'> + </button> <h3 class='manage' id='manage' onclick='manage_function()'> Manage </h3> </div> <input onkeyup='search()' class='search_bar' type='text' placeholder='Search'>
+ </div>
+ <hr>
+  {% if personnes|length == 0 %}
+   <p class="empty_message"> Nothing was found :( </p>
+  {% endif %}
+ <div class='list_wrapper'>
+ <ul id='name_list' class="display_list">
+  {% for i in personnes %}
+ <li>
+  {{i}} <div class="actions_element"><button class='action_element' title='Edit' onclick="edit_prompt({{i.id}},'{{i}}',this.parentElement.parentElement)">EDIT</button><button class='action_element' onclick="delete_prompt({{i.id}},'{{i}}',this.parentElement.parentElement)" title='Delete'>DEL</button></div>
+ </li>
+  {% endfor %}
+ </ul>
+ </div>
+ </div>
+
+{% endblock %}

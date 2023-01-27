@@ -1,0 +1,38 @@
+*{padding:0;margin:0}
+body{background:#FFF}
+nav{height:48px;position:sticky;top:0px;background:rgba(33,33,33,0.95);backdrop-filter:blur(4px);display:flex;justify-content:center;align-items:center;box-shadow:0px 1px 5px #222;z-index:9999}
+h1{font-family:verdana;color:white;margin:10px;}
+.explore{color:#2c2c2c;margin:30px;font-weight:1}
+.form_title{color:#444;margin:20px;font-weight:1;text-align:center;}
+a{font-size:1em;font-family:arial,verdana;color:#dadce0;text-decoration:none;transition:0.3s ease color;margin:20px}}
+a:hover{color:white;}
+p{max-width:800px;line-height:25px;color:#222;font-family:verdana;font-size:1em;margin:10px;color:white}
+.intro{min-height:400px;background:#2c2c2c;padding:20px;}
+.display_list{display:flex;list-style:none;flex-wrap:wrap;padding-top:50px;justify-content: center;max-width:1024px;}
+.header_explore{display:flex;align-items:center;}
+.add_button{height:20px;width:20px;border-radius:50%;color:black;font-family:roboto;font-size:14px;cursor:pointer;background:none;}
+.display_list > li{width:200px;text-align:center;height:40px;padding:10px;margin:5px;font-size:1em;font-family:verdana;display:flex;align-items:center;justify-content:center;border-radius:5px;user-select:none;transition:background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;}
+.display_list > li:hover{background:#EDEDED;box-shadow:0px 0px 16px #BBB;transform:scale(1.02)}
+.manage{color:#222;font-family:verdana;font-weight:1;text-decoration:underline;margin:30px;cursor:pointer;user-select:none;width:75px;text-align:center;}
+.list_wrapper{display:flex;justify-content:center}
+.display_list_manage{width:100%;display:flex;flex-direction:column;list-style:none;}
+.display_list_manage > li{width: calc(100% - 50px);display: flex;align-items: center;border-bottom: 1px solid #dadce0;padding: 25px;font-family: verdana;}
+.display_list > li > .actions_element{display:none;}
+.search_bar{padding:10px;width:calc(100% - 400px);border:1px solid #777;border-radius:15px}
+.actions{display:flex;align-items:center;justify-content:center}
+.actions_element{position:absolute;right:15px;}
+.action_element{margin:5px}
+.empty_message{color:#B04040;font-size:2em;text-align:center;margin:20px;padding:0;max-width:inherit}
+.prompt{background: #212121;width: 500px;min-height: 200px;display: flex;align-items: center;flex-direction: column;justify-content: center;padding: 20px;box-shadow: 10px 10px 25px rgb(25 25 24 / 50%);border-radius: 15px;}
+h2{text-align:center;color:white;font-family:verdana;font-weight:1;margin:20px;font-size:2em;}
+form{display:flex;flex-direction:column;align-items:center;}
+form > input{height:40px;padding-left:20px;padding-right:20px;margin:20px;max-width:500px;min-width:250px;border-radius:10px;border:1px solid #dadce0;}
+.actions_prompt{width:100%;display:flex;justify-content:center;}
+.actions_prompt > button{font-family:verdana;font-size: 1.5em;width: 160px;height: 80px;border-radius: 10px;margin: 30px;border: 0px;height: 62px;background: #333;cursor: pointer;color: white;}
+.pop_up{position:fixed;width:100%;height:100vh;background:rgba(24,24,24,0.25);backdrop-filter:blur(3px);z-index:99999;display:flex;align-items:center;justify-content:center;display:none;}
+@media screen and (max-width:460px){
+.header_explore{flex-direction:column}
+.explore{margin:10px}
+.search_bar{width:90%;margin-bottom:15px}
+.display_list{padding-top:10px}
+}

@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+{% if person is not none %}
+<title> Edit {{person}} </title>
+<h1 class="form_title"> Edit {{person}} </h1>
+{% else %}
+<title> Add person </title>
+<h1 class="form_title"> Add person </h1>
+{% endif %}
+
+{% if form == 'create' %}
+<form method="post" action="/form">
+{% else %}
+<form method="post" action="/edit/{{person.id}}">
+{% endif %}
+{% csrf_token %}
+ <input placeholder="first name" id='prenom' name='prenom' type="text" required value="{{person.prenom}}">
+ <input placeholder="last name" id='nom' name="nom" type="text" required value="{{person.nom}}">
+ <input type="submit" value="Confirm">
+</form>
+
+{% endblock %}
